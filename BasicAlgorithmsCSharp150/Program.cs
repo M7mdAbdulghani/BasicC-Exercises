@@ -14,6 +14,7 @@ namespace BasicAlgorithmsCSharp150
             */
             // SolveExerciseOne();
 
+
             /*
                 Exercise 2
                 ***************************************************************************************** 
@@ -21,6 +22,15 @@ namespace BasicAlgorithmsCSharp150
                 If n is greater than 51 return triple the absolute difference
             */
             // SolveExerciseTwo();
+
+
+            /*
+                Exercise 3
+                ***************************************************************************************** 
+                Write a C# Sharp program to check two given integers, and return true if one of them is 30 or if their sum is 30
+            */
+            // SolveExerciseThree();
+
         }
         public static void SolveExerciseOne()
         {
@@ -58,6 +68,28 @@ namespace BasicAlgorithmsCSharp150
 
             int result = (number > userNumber) ? (number - userNumber) : (userNumber - number) * 3;
             Console.WriteLine("The difference is {0}", result);
+        }
+
+        public static void SolveExerciseThree()
+        {
+            int number1, number2;
+            bool number1Val, number2Val, result;
+
+            while (true)
+            {
+                Console.WriteLine("Enter the first number: ");
+                number1Val = int.TryParse(Console.ReadLine(), out number1);
+                Console.WriteLine("Enter the second number: ");
+                number2Val = int.TryParse(Console.ReadLine(), out number2);
+
+                if(number1Val && number2Val)
+                {
+                    break;
+                }
+                Console.WriteLine("Invalid input");
+            }
+
+            Console.WriteLine("Result is {0}", (number1 == 30 || number2 == 30 || number1 + number2 == 30));
         }
     }
 }
