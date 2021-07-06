@@ -1,0 +1,13 @@
+E:\Courses\Problem Solving\C# W3resource\BasicAlgorithmsCSharp150\BasicAlgorithmsCSharp150\bin\Debug\netcoreapp3.1\BasicAlgorithmsCSharp150.exe
+E:\Courses\Problem Solving\C# W3resource\BasicAlgorithmsCSharp150\BasicAlgorithmsCSharp150\bin\Debug\netcoreapp3.1\BasicAlgorithmsCSharp150.deps.json
+E:\Courses\Problem Solving\C# W3resource\BasicAlgorithmsCSharp150\BasicAlgorithmsCSharp150\bin\Debug\netcoreapp3.1\BasicAlgorithmsCSharp150.runtimeconfig.json
+E:\Courses\Problem Solving\C# W3resource\BasicAlgorithmsCSharp150\BasicAlgorithmsCSharp150\bin\Debug\netcoreapp3.1\BasicAlgorithmsCSharp150.runtimeconfig.dev.json
+E:\Courses\Problem Solving\C# W3resource\BasicAlgorithmsCSharp150\BasicAlgorithmsCSharp150\bin\Debug\netcoreapp3.1\BasicAlgorithmsCSharp150.dll
+E:\Courses\Problem Solving\C# W3resource\BasicAlgorithmsCSharp150\BasicAlgorithmsCSharp150\bin\Debug\netcoreapp3.1\BasicAlgorithmsCSharp150.pdb
+E:\Courses\Problem Solving\C# W3resource\BasicAlgorithmsCSharp150\BasicAlgorithmsCSharp150\obj\Debug\netcoreapp3.1\BasicAlgorithmsCSharp150.csprojAssemblyReference.cache
+E:\Courses\Problem Solving\C# W3resource\BasicAlgorithmsCSharp150\BasicAlgorithmsCSharp150\obj\Debug\netcoreapp3.1\BasicAlgorithmsCSharp150.AssemblyInfoInputs.cache
+E:\Courses\Problem Solving\C# W3resource\BasicAlgorithmsCSharp150\BasicAlgorithmsCSharp150\obj\Debug\netcoreapp3.1\BasicAlgorithmsCSharp150.AssemblyInfo.cs
+E:\Courses\Problem Solving\C# W3resource\BasicAlgorithmsCSharp150\BasicAlgorithmsCSharp150\obj\Debug\netcoreapp3.1\BasicAlgorithmsCSharp150.csproj.CoreCompileInputs.cache
+E:\Courses\Problem Solving\C# W3resource\BasicAlgorithmsCSharp150\BasicAlgorithmsCSharp150\obj\Debug\netcoreapp3.1\BasicAlgorithmsCSharp150.dll
+E:\Courses\Problem Solving\C# W3resource\BasicAlgorithmsCSharp150\BasicAlgorithmsCSharp150\obj\Debug\netcoreapp3.1\BasicAlgorithmsCSharp150.pdb
+E:\Courses\Problem Solving\C# W3resource\BasicAlgorithmsCSharp150\BasicAlgorithmsCSharp150\obj\Debug\netcoreapp3.1\BasicAlgorithmsCSharp150.genruntimeconfig.cache
