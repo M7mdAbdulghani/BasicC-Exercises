@@ -31,6 +31,21 @@ namespace BasicAlgorithmsCSharp150
             */
             // SolveExerciseThree();
 
+            /*
+                Exercise 4
+                ***************************************************************************************** 
+                Write a C# Sharp program to check a given integer and return true if it is within 10 of 100 or 200.
+            */
+            // SolveExerciseFour();
+
+            /*
+                Exercise 5
+                ***************************************************************************************** 
+                Write a C# Sharp program to create a new string where 'if' is added to the front of a given string. 
+                If the string already begins with 'if', return the string unchanged.
+            */
+            // SolveExerciseFive();
+
         }
         public static void SolveExerciseOne()
         {
@@ -90,6 +105,30 @@ namespace BasicAlgorithmsCSharp150
             }
 
             Console.WriteLine("Result is {0}", (number1 == 30 || number2 == 30 || number1 + number2 == 30));
+        }
+
+        public static void SolveExerciseFour()
+        {
+            const int number1 = 100;
+            const int number2 = 200;
+            const int StaticValue = 10;
+            int userInput;
+            Console.WriteLine("Please enter a number: ");
+            while (!int.TryParse(Console.ReadLine(), out userInput))
+            {
+                Console.WriteLine("Invalid input, please try again");
+            }
+
+            Console.WriteLine(( (number1 - userInput <= 10 && number1 - userInput >= 0) || (userInput - number1 <= 10 && userInput - number1 >= 0) ||
+                                (number2 - userInput <= 10 && number2 - userInput >= 0) || (userInput - number2 <= 10 && userInput - number2 >= 0) ));
+        }
+
+        public static void SolveExerciseFive()
+        {
+            Console.WriteLine("Enter a string");
+            string userInput = Console.ReadLine();
+
+            Console.WriteLine("Output is: {0}", userInput.ToLower().StartsWith("if") ? userInput : userInput.Insert(0, "if "));
         }
     }
 }
