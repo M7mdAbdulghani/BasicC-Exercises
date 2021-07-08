@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Text;
 
 namespace BasicAlgorithmsCSharp150
 {
@@ -60,7 +60,9 @@ namespace BasicAlgorithmsCSharp150
                 ***************************************************************************************** 
                 Write a C# Sharp program to exchange the first and last characters in a given string and return the new string.
             */
-            SolveExerciseSeven();
+            // SolveExerciseSeven();
+            // SolveExerciseSevenOnAnotherWay
+
 
         }
         public static void SolveExerciseOne()
@@ -167,6 +169,8 @@ namespace BasicAlgorithmsCSharp150
             Console.WriteLine("Enter a string: ");
             var userInput = Console.ReadLine();
 
+            var StartTime = DateTime.Now;
+
             if(userInput.Length < 2)
             {
                 Console.WriteLine("Result is: {0}", userInput);
@@ -176,7 +180,40 @@ namespace BasicAlgorithmsCSharp150
             var firstLetter = userInput[0];
             var lastLetter = userInput[userInput.Length - 1];
 
+            
             Console.WriteLine("Result is: {0}", lastLetter + userInput.Substring(1, userInput.Length - 2) + firstLetter);
+
+            var EndTime = DateTime.Now;
+            Console.WriteLine("Execution Time is: {0}", (EndTime - StartTime));
+        }
+
+        public static void SolveExerciseSevenOnAnotherWay()
+        {
+            Console.WriteLine("Enter a string: ");
+            var userInput = Console.ReadLine();
+
+            var StartTime = DateTime.Now;
+
+            if (userInput.Length < 2)
+            {
+                Console.WriteLine("Result is: {0}", userInput);
+                return;
+            }
+
+            int middleStringLength = userInput.Length - 1;
+            StringBuilder input = new StringBuilder();
+            
+            input.Append(userInput[middleStringLength]);
+            for (int i = 1; i < middleStringLength; i++)
+            {
+                input.Append(userInput[i]);
+            }
+            input.Append(userInput[0]);
+
+            Console.WriteLine("Result is: {0}", input);
+
+            var EndTime = DateTime.Now;
+            Console.WriteLine("Execution Time is: {0}", (EndTime - StartTime));
         }
     }
 }
