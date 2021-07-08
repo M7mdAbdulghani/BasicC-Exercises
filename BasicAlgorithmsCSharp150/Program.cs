@@ -111,7 +111,6 @@ namespace BasicAlgorithmsCSharp150
         {
             const int number1 = 100;
             const int number2 = 200;
-            const int StaticValue = 10;
             int userInput;
             Console.WriteLine("Please enter a number: ");
             while (!int.TryParse(Console.ReadLine(), out userInput))
@@ -119,8 +118,8 @@ namespace BasicAlgorithmsCSharp150
                 Console.WriteLine("Invalid input, please try again");
             }
 
-            Console.WriteLine(( (number1 - userInput <= 10 && number1 - userInput >= 0) || (userInput - number1 <= 10 && userInput - number1 >= 0) ||
-                                (number2 - userInput <= 10 && number2 - userInput >= 0) || (userInput - number2 <= 10 && userInput - number2 >= 0) ));
+            Console.WriteLine( Math.Abs(number1 - userInput) <= 10 ||
+                                Math.Abs(number2 - userInput) <= 10 );
         }
 
         public static void SolveExerciseFive()
