@@ -46,6 +46,14 @@ namespace BasicAlgorithmsCSharp150
             */
             // SolveExerciseFive();
 
+            /*
+                Exercise 6
+                ***************************************************************************************** 
+                Write a C# Sharp program to remove the character in a given position of a given string. 
+                The given position will be in the range 0.. string length -1 inclusive.
+            */
+            // SolveExerciseSix();
+
         }
         public static void SolveExerciseOne()
         {
@@ -128,6 +136,22 @@ namespace BasicAlgorithmsCSharp150
             string userInput = Console.ReadLine();
 
             Console.WriteLine("Output is: {0}", userInput.ToLower().StartsWith("if") ? userInput : userInput.Insert(0, "if "));
+        }
+
+        public static void SolveExerciseSix()
+        {
+            int removedCharactersCount = 1;
+            int position;
+            Console.WriteLine("Enter a string:");
+            string userText = Console.ReadLine();
+            Console.WriteLine("Enter the position that you want to remove... start from 0");
+
+            while (!int.TryParse(Console.ReadLine(), out position) || position > userText.Length - 1 || position < 0)
+            {
+                Console.WriteLine("Invalid position...please try again");
+            }
+
+            Console.WriteLine("New Text is: {0}", userText.Remove(position, removedCharactersCount));
         }
     }
 }
