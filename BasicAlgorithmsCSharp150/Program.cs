@@ -63,7 +63,13 @@ namespace BasicAlgorithmsCSharp150
             // SolveExerciseSeven();
             // SolveExerciseSevenOnAnotherWay
 
-
+            /*
+                Exercise 8
+                ***************************************************************************************** 
+                Write a C# Sharp program to create a new string which is 4 copies of the 2 front characters of a given string.
+                If the given string length is less than 2 return the original string.
+            */
+            SolveExerciseEight();
         }
         public static void SolveExerciseOne()
         {
@@ -214,6 +220,28 @@ namespace BasicAlgorithmsCSharp150
 
             var EndTime = DateTime.Now;
             Console.WriteLine("Execution Time is: {0}", (EndTime - StartTime));
+        }
+
+        public static void SolveExerciseEight()
+        {
+            Console.WriteLine("Enter a string...");
+            string userInput = Console.ReadLine();
+            int numberOfRepetition = 4;
+
+            if(userInput.Length < 2)
+            {
+                Console.WriteLine("Result is: {0}", userInput);
+                return;
+            }
+
+            StringBuilder newString = new StringBuilder();
+
+            for (int i = 0; i < numberOfRepetition; i++)
+            {
+                newString.Append(userInput.Substring(0, 2));
+            }
+
+            Console.WriteLine("Result is: {0}", newString);
         }
     }
 }
