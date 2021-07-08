@@ -71,7 +71,23 @@ namespace BasicAlgorithmsCSharp150
                 If the given string length is less than 2 return the original string.
             */
             // SolveExerciseEight();
-            SolveExerciseEightOnAnotherWay();
+            // SolveExerciseEightOnAnotherWay();
+
+            /*
+                Exercise 9
+                ***************************************************************************************** 
+                Write a C# Sharp program to create a new string with the last char added at 
+                the front and back of a given string of length 1 or more.
+            */
+            // SolveExerciseNine();
+            // SolveExerciseNineOnAnotherWay();
+
+            /*
+                Exercise 10
+                ***************************************************************************************** 
+                Write a C# Sharp program to check if a given positive number is a multiple of 3 or a multiple of 7
+            */
+            SolveExerciseTen();
         }
         public static void SolveExerciseOne()
         {
@@ -252,6 +268,49 @@ namespace BasicAlgorithmsCSharp150
             Console.WriteLine(string.Concat(null, Enumerable.Repeat('C', 4)));
             var EndTime = DateTime.Now;
             Console.WriteLine("Execution Time: {0}", (EndTime - StartTime));
+        }
+
+        public static void SolveExerciseNine()
+        {
+            Console.WriteLine("Enter a string...");
+            string userInput = Console.ReadLine();
+
+            if(userInput.Length < 1)
+            {
+                Console.WriteLine("String is Empty");
+                return;
+            }
+
+            StringBuilder newString = new StringBuilder();
+            newString
+                .Insert(0, userInput[userInput.Length - 1])
+                .Append(userInput)
+                .Append(userInput[userInput.Length - 1]);
+
+            Console.WriteLine( newString.ToString() );
+        }
+
+        public static void SolveExerciseNineOnAnotherWay()
+        {
+            Console.WriteLine("Enter a string...");
+            var input = Console.ReadLine();
+
+            Console.WriteLine( (input.Length < 1) ? 
+                "Input is Empty"                  : 
+                input[input.Length - 1] + input + input[input.Length - 1]) ;
+        }
+
+        public static void SolveExerciseTen()
+        {
+            Console.WriteLine("Enter a number...");
+            int number;
+
+            while (!int.TryParse(Console.ReadLine(), out number))
+            {
+                Console.WriteLine("Invalid input...try again");
+            }
+
+            Console.WriteLine( (number % 3 == 0 || number % 7 == 0) );
         }
     }
 }
