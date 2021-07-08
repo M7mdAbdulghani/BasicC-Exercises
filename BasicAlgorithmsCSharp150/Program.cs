@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace BasicAlgorithmsCSharp150
 {
@@ -53,6 +54,13 @@ namespace BasicAlgorithmsCSharp150
                 The given position will be in the range 0.. string length -1 inclusive.
             */
             // SolveExerciseSix();
+
+            /*
+                Exercise 7
+                ***************************************************************************************** 
+                Write a C# Sharp program to exchange the first and last characters in a given string and return the new string.
+            */
+            SolveExerciseSeven();
 
         }
         public static void SolveExerciseOne()
@@ -152,6 +160,23 @@ namespace BasicAlgorithmsCSharp150
             }
 
             Console.WriteLine("New Text is: {0}", userText.Remove(position, removedCharactersCount));
+        }
+
+        public static void SolveExerciseSeven()
+        {
+            Console.WriteLine("Enter a string: ");
+            var userInput = Console.ReadLine();
+
+            if(userInput.Length < 2)
+            {
+                Console.WriteLine("Result is: {0}", userInput);
+                return;
+            }
+
+            var firstLetter = userInput[0];
+            var lastLetter = userInput[userInput.Length - 1];
+
+            Console.WriteLine("Result is: {0}", lastLetter + userInput.Substring(1, userInput.Length - 2) + firstLetter);
         }
     }
 }
