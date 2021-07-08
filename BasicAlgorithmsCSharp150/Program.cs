@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 
 namespace BasicAlgorithmsCSharp150
@@ -69,7 +70,8 @@ namespace BasicAlgorithmsCSharp150
                 Write a C# Sharp program to create a new string which is 4 copies of the 2 front characters of a given string.
                 If the given string length is less than 2 return the original string.
             */
-            SolveExerciseEight();
+            // SolveExerciseEight();
+            SolveExerciseEightOnAnotherWay();
         }
         public static void SolveExerciseOne()
         {
@@ -242,6 +244,14 @@ namespace BasicAlgorithmsCSharp150
             }
 
             Console.WriteLine("Result is: {0}", newString);
+        }
+
+        public static void SolveExerciseEightOnAnotherWay()
+        {
+            var StartTime = DateTime.Now;
+            Console.WriteLine(string.Concat(null, Enumerable.Repeat('C', 4)));
+            var EndTime = DateTime.Now;
+            Console.WriteLine("Execution Time: {0}", (EndTime - StartTime));
         }
     }
 }
