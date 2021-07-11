@@ -97,7 +97,14 @@ namespace BasicAlgorithmsCSharp150
                 If the given string length is less than 3, use whatever characters are there.
             */
             // SolveExercise11();
-            SolveExercise11OnAnotherWay();
+            // SolveExercise11OnAnotherWay();
+
+            /*
+                Exercise 12
+                ***************************************************************************************** 
+                Write a C# Sharp program to check if a given string starts with 'C#' or not.
+            */
+            SolveExercise12();
         }
         public static void SolveExerciseOne()
         {
@@ -353,7 +360,10 @@ namespace BasicAlgorithmsCSharp150
 
         public static void SolveExercise12()
         {
+            Console.WriteLine("Enter a string...");
+            string input = Console.ReadLine();
 
+            Console.WriteLine(input.ToLower().StartsWith("c#"));
         }
     }
 }
