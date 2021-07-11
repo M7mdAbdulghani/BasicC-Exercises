@@ -350,5 +350,10 @@ namespace BasicAlgorithmsCSharp150
 
             Console.WriteLine("Result is: {0}", newinput);
         }
+
+        public static void SolveExercise12()
+        {
+
+        }
     }
 }
