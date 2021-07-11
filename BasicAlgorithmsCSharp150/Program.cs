@@ -87,7 +87,17 @@ namespace BasicAlgorithmsCSharp150
                 ***************************************************************************************** 
                 Write a C# Sharp program to check if a given positive number is a multiple of 3 or a multiple of 7
             */
-            SolveExerciseTen();
+            // SolveExerciseTen();
+
+            /*
+                Exercise 11
+                ***************************************************************************************** 
+                Write a C# Sharp program to create a new string taking the first 3 characters of a given string
+                and return the string with the 3 characters added at both the front and back. 
+                If the given string length is less than 3, use whatever characters are there.
+            */
+            // SolveExercise11();
+            SolveExercise11OnAnotherWay();
         }
         public static void SolveExerciseOne()
         {
@@ -311,6 +321,34 @@ namespace BasicAlgorithmsCSharp150
             }
 
             Console.WriteLine( (number % 3 == 0 || number % 7 == 0) );
+        }
+
+        public static void SolveExercise11()
+        {
+            Console.WriteLine("Enter a string...");
+            string input = Console.ReadLine();
+            
+            StringBuilder newinput = new StringBuilder();
+            string firstStringPart = (input.Length > 3) ? input.Substring(0, 3) : ""; 
+
+            newinput = (input.Length < 3) ? newinput.Insert(0, input).Append(input).Append(input)
+                               : newinput.Insert(0, firstStringPart).Append(input).Append(firstStringPart);
+
+            Console.WriteLine("Result is: {0}", newinput);
+        }
+
+        public static void SolveExercise11OnAnotherWay()
+        {
+            Console.WriteLine("Enter a string...");
+            string input = Console.ReadLine();
+
+            StringBuilder newinput = new StringBuilder();
+            string firstStringPart = (input.Length > 3) ? input.Substring(0, 3) : "";
+
+            newinput = (input.Length < 3) ? newinput.Append(string.Concat(Enumerable.Repeat(input, 3)))
+                               : newinput.Insert(0, firstStringPart).Append(input).Append(firstStringPart);
+
+            Console.WriteLine("Result is: {0}", newinput);
         }
     }
 }
