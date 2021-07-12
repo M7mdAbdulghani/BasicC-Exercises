@@ -112,6 +112,13 @@ namespace BasicAlgorithmsCSharp150
                 Write a C# Sharp program to check if one given temperatures is less than 0 and the other is greater than 100.
             */
             // SolveExercise13();
+
+            /*
+                Exercise 14
+                ***************************************************************************************** 
+                Write a C# Sharp program to check two given integers whether either of them is in the range 100..200 inclusive.
+            */
+            SolveExercise14();
         }
         public static void SolveExerciseOne()
         {
@@ -395,6 +402,30 @@ namespace BasicAlgorithmsCSharp150
                 input = Console.ReadLine();
             }
             return tempDegree;
+        }
+
+        public static void SolveExercise14()
+        {
+            const int max = 200;
+            const int min = 100;
+            int firstNumber, secondNumber;
+            Console.WriteLine("Enter the first number...");
+            firstNumber = CheckIntInput(Console.ReadLine());
+            Console.WriteLine("Enter the second number...");
+            secondNumber = CheckIntInput(Console.ReadLine());
+
+            Console.WriteLine( (firstNumber >= min && firstNumber <= max) || (secondNumber >= min && secondNumber <= max) );
+        }
+
+        public static int CheckIntInput(string input)
+        {
+            int number;
+            while (!int.TryParse(input, out number))
+            {
+                Console.WriteLine("Invalid input...please try again");
+                input = Console.ReadLine();
+            }
+            return number;
         }
     }
 }
