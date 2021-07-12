@@ -118,7 +118,14 @@ namespace BasicAlgorithmsCSharp150
                 ***************************************************************************************** 
                 Write a C# Sharp program to check two given integers whether either of them is in the range 100..200 inclusive.
             */
-            SolveExercise14();
+            // SolveExercise14();
+
+            /*
+                Exercise 15
+                ***************************************************************************************** 
+                Write a C# Sharp program to check two given integers whether either of them is in the range 100..200 inclusive.
+            */
+            SolveExercise15();
         }
         public static void SolveExerciseOne()
         {
@@ -426,6 +433,23 @@ namespace BasicAlgorithmsCSharp150
                 input = Console.ReadLine();
             }
             return number;
+        }
+
+        public static void SolveExercise15()
+        {
+            int firstNumber, secondNumber, thirdNumber;
+            const int max = 50;
+            const int min = 20;
+
+            Console.WriteLine("Enter the first number...");
+            firstNumber = CheckIntInput(Console.ReadLine());
+            Console.WriteLine("Enter the second number...");
+            secondNumber = CheckIntInput(Console.ReadLine());
+            Console.WriteLine("Enter the third number...");
+            thirdNumber = CheckIntInput(Console.ReadLine());
+
+            Console.WriteLine( (firstNumber <= max && firstNumber >= min) || (secondNumber <= max && secondNumber >= min) ||
+                               (thirdNumber <= max && thirdNumber >= min) );
         }
     }
 }
