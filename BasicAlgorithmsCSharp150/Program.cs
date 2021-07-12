@@ -104,7 +104,14 @@ namespace BasicAlgorithmsCSharp150
                 ***************************************************************************************** 
                 Write a C# Sharp program to check if a given string starts with 'C#' or not.
             */
-            SolveExercise12();
+            // SolveExercise12();
+
+            /*
+                Exercise 13
+                ***************************************************************************************** 
+                Write a C# Sharp program to check if one given temperatures is less than 0 and the other is greater than 100.
+            */
+            // SolveExercise13();
         }
         public static void SolveExerciseOne()
         {
@@ -364,6 +371,30 @@ namespace BasicAlgorithmsCSharp150
             string input = Console.ReadLine();
 
             Console.WriteLine(input.ToLower().StartsWith("c#"));
+        }
+
+        public static void SolveExercise13()
+        {
+            int firstTemp, secondTemp;
+            const int max = 100;
+            const int min = 0;
+            Console.WriteLine("Enter the first temperature...");
+            firstTemp = CheckInput(Console.ReadLine());
+            Console.WriteLine("Enter the second temperature...");
+            secondTemp = CheckInput(Console.ReadLine());
+
+            Console.WriteLine( (firstTemp > max && secondTemp < min) || (firstTemp < min && secondTemp > max) );
+        }
+
+        public static int CheckInput(string input)
+        {
+            int tempDegree;
+            while (!int.TryParse(input, out tempDegree))
+            {
+                Console.WriteLine("Invalid input, please try again");
+                input = Console.ReadLine();
+            }
+            return tempDegree;
         }
     }
 }
